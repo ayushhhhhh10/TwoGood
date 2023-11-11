@@ -1,0 +1,375 @@
+@font-face {
+    font-family: Futura;
+    src: url(./Futura-Bold.ttf);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+#nav {
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#nav-part1 {
+    /* background-color: RED; */
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgb(247, 251, 255);
+}
+
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgb(217, 236, 255);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+
+}
+
+#page1 {
+    min-height: 100vh;
+    /* background-color: aqua; */
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 20vh;
+
+}
+
+#page1 h1 {
+    font-size: 15.8vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing: -8px;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 3vw 2.2vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem {
+    height: 100%;
+    width: 31%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dets{
+    height: 42px;
+    width: 70%;
+    background-color: rgb(239, 247, 255);
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#page2 .elem .dets h3{
+    font-size: 1vw;
+}
+
+#page2 .elem .dets .tiny{
+    font-size: 0.85vw;
+    color: #000000b8;
+}
+
+#page3{
+    min-height: 150vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;   
+}
+#read{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 4vw;
+}
+
+#read #heading{
+    width: 30%;
+    font-size: 1.5vw;
+}
+
+#read #para{
+    width: 45%;
+    color: #333;
+}
+
+#page3 .child{
+    height: 54vh;
+    width: 38vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page3 .child img{
+    height: 100%;
+}
+
+#page4{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page4 h1{
+    font-size: 4.6vw;
+    letter-spacing: -3.5px;
+    width: 85%;
+    margin-bottom: 9vh;
+}
+
+#page4 button{
+    height: 7vh;
+    width: 20vw;
+    border:solid #333 2px;
+    border-radius: 30px;
+}
+
+#page4 button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#page4 p{
+    margin-top: 5vh;
+    width: 17%;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+@media (max-width:600px) {
+    #main{
+        overflow: hidden;
+    }
+
+    #page1{
+        min-height: 70vh;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    } 
+
+    #page1 h1{
+        font-size: 15vw;
+        letter-spacing: -1px;
+        line-height: 16vw;
+    }
+
+    #video-container{
+        height: 25vh;
+        width:100%;
+        margin-top: 3vh;
+    }
+
+    #video-container #play{
+        padding: 8vw 6vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 4.5vw;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    #page2{
+        min-height: 100vh;
+        width:100%;
+        flex-direction: column;
+        padding: 4vw 3vw;
+    }
+
+    #page2 .elem{
+        height: 100%;
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    #page2 .elem .dets{
+        height: 20px;
+        width: 55%;
+    }
+
+    #page2 .elem .dets h3{
+        font-size: 2.5vw;
+    }
+    
+    #page2 .elem .dets .tiny{
+        font-size: 2vw;
+    }
+    
+    #read #heading{
+        width: 50%;
+        font-size: 2.5vw;
+    }
+    
+    #read #para{
+        width: 55%;
+        font-size: 2vw;
+    }
+
+    #page3{
+        min-height: 50vh;
+        width: 100%;
+    }
+    
+    #page3 .child{
+        height: 30vh;
+        width: 40vw;
+        padding: 5vw;
+    }
+    #page4{
+        height: 50%;
+    }
+    #page4 h1{
+        font-size: 7vw;
+        width: 90%;
+        letter-spacing:0.1px;
+        margin-bottom: 3.5vh;
+    }
+    
+    #page4 button{
+        height: 3.5vh;
+        width: 200px;
+        border-radius: 20px;
+    }
+    
+    #page4 p{
+        margin: 5vh;
+        width: 70%;
+    }
+
+    #nav{
+        padding: 15px;
+    }
+    
+    #nav #nav-part2 #links a{
+        display: none;
+    }
+}
