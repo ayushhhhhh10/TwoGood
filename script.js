@@ -47,6 +47,20 @@ function logoAnimation(){
 }
 logoAnimation();
 
+function linksHide(){
+    gsap.to('#links',{
+        opacity:0,
+        scrollTrigger:{
+            scroller:"#main",
+            trigger:"#page1",
+            start:'top 0',
+            end:'top -10%',
+            scrub:true
+        }
+    })
+}
+linksHide();
+
 function videoconAnimation(){
 var videocon = document.querySelector('#video-container')
 var play = document.querySelector('#play')
